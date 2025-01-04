@@ -20,6 +20,11 @@ run_duckdb:
 	@echo "Run the sample hello_duckdb.py file"
 	@uv run hello_duckdb.py
 
+run_unity_catalog:
+	@echo "Run the sample hello_unity_catalog.py file"
+	@uv run hello_unity_catalog.py
+
+
 clean:
 	@echo "Clean up"
 	@rm -Rf .venv uv.lock
