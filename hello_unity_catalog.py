@@ -1,11 +1,9 @@
 import duckdb
 
 def main():
-    # create a connection to a file called 'sample_duckdb_database.db'
-    # this database is created using duckdb cli and integrated with unity catalog
     # to setup a delta catalog, please follow the instructions here:
-    # https://docs.unitycatalog.io/quickstart/ to run UC in local mode
-    # and this docs https://docs.unitycatalog.io/integrations/unity-catalog-duckdb/
+    # https://docs.unitycatalog.io/quickstart/
+    # https://docs.unitycatalog.io/integrations/unity-catalog-duckdb/
     # to setup a delta catalog in duckdb
 
     conn = duckdb.connect()
