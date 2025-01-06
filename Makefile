@@ -5,25 +5,13 @@ init_venv:
 	@brew install uv
 
 run:
-	@echo "Run the sample hello.py file"
-	@uv run hello.py
-
-run_delta:
-	@echo "Run the sample hello_delta.py file"
-	@uv run hello_delta.py
-
-run_iceberg:
-	@echo "Run the sample hello_iceberg.py file"
-	@uv run hello_iceberg.py
-
-run_duckdb:
-	@echo "Run the sample hello_duckdb.py file"
-	@uv run hello_duckdb.py
-
-run_unity_catalog:
-	@echo "Run the sample hello_unity_catalog.py file"
-	@uv run hello_unity_catalog.py
-
+	@if [ -n "$(TEST)" ]; then \
+		echo "Running hello_$(TEST).py"; \
+		uv run hello_$(TEST).py; \
+	else \
+		echo "Running hello.py"; \
+		uv run hello.py; \
+	fi
 
 clean:
 	@echo "Clean up"
